@@ -1,17 +1,17 @@
-
 import axios from 'axios';
-const DEPLOYED='https://e-commerce-server-production-0873.up.railway.app'
-const LOCALHOST='http://localhost:5454'
 
-export const API_BASE_URL = DEPLOYED
+// Use env variable for base URL (Vercel will inject this)
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
 });
 
+// Automatically attach JWT token if it exists
 const token = localStorage.getItem('jwt');
-
-api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+if (token) {
+  api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
 
 api.defaults.headers.post['Content-Type'] = 'application/json';
 
