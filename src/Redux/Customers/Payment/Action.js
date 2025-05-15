@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../../../config/api';
+import api, { API_BASE_URL } from '../../../config/api';
 import {
     CREATE_PAYMENT_REQUEST,
     CREATE_PAYMENT_SUCCESS,
@@ -8,8 +8,6 @@ import {
     UPDATE_PAYMENT_FAILURE,
   } from './ActionType';
   
-  import axios from 'axios';
-  
   export const createPayment = (reqData) => async (dispatch) => {
     console.log("create payment reqData ",reqData)
     try {
@@ -17,19 +15,12 @@ import {
         type: CREATE_PAYMENT_REQUEST,
       });
   
+      const { data } = await api.post(`/api/payments/${reqData.orderId}`, reqData);
   
-      const config = {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${reqData.jwt}`,
-        },
-      };
-  
-      const { data } = await axios.post(`${API_BASE_URL}/api/payments/${reqData.orderId}`,reqData, config);
-  console.log("datta",data)
-  if(data.payment_link_url){
-    window.location.href=data.payment_link_url;
-  }
+      console.log("datta",data)
+      if(data.payment_link_url){
+        window.location.href=data.payment_link_url;
+      }
       dispatch({
         type: CREATE_PAYMENT_SUCCESS,
         payload: data,
@@ -52,13 +43,7 @@ import {
       console.log("update payment reqData ",reqData)
       dispatch(updatePaymentRequest());
       try {
-        const config = {
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${reqData.jwt}`,
-          },
-        };
-        const response = await axios.get(`${API_BASE_URL}/api/payments?payment_id=${reqData.paymentId}&order_id=${reqData.orderId}`,config);
+        const response = await api.get(`/api/payments?payment_id=${reqData.paymentId}&order_id=${reqData.orderId}`);
         console.log("updated data",response.data)
         dispatch(updatePaymentSuccess(response.data));
       } catch (error) {

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
@@ -24,7 +23,7 @@ const registerFailure = error => ({ type: REGISTER_FAILURE, payload: error });
 export const register = userData => async dispatch => {
   dispatch(registerRequest());
   try {
-    const response=await axios.post(`${API_BASE_URL}/auth/signup`, userData);
+    const response = await api.post(`/auth/signup`, userData);
     const user = response.data;
     if(user.jwt) localStorage.setItem("jwt",user.jwt)
     console.log("registerr :- ",user)
@@ -43,7 +42,7 @@ const loginFailure = error => ({ type: LOGIN_FAILURE, payload: error });
 export const login = userData => async dispatch => {
   dispatch(loginRequest());
   try {
-    const response = await axios.post(`${API_BASE_URL}/auth/signin`, userData);
+    const response = await api.post(`/auth/signin`, userData);
     const user = response.data;
     if(user.jwt) localStorage.setItem("jwt",user.jwt)
     console.log("login ",user)
@@ -61,11 +60,7 @@ export const getAllCustomers = (token) => {
     console.log("jwt - ",token)
     dispatch({ type: GET_ALL_CUSTOMERS_REQUEST });
     try {
-      const response = await axios.get(`${API_BASE_URL}/api/admin/users`,{
-        headers:{
-          "Authorization":`Bearer ${token}`
-        }
-      });
+      const response = await api.get(`/api/admin/users`);
       const users = response.data;
       dispatch({ type: GET_ALL_CUSTOMERS_SUCCESS, payload: users });
       console.log("All Customers",users)
@@ -81,11 +76,7 @@ export const getUser = (token) => {
   return async (dispatch) => {
     dispatch({ type: GET_USER_REQUEST });
     try {
-      const response = await axios.get(`${API_BASE_URL}/api/users/profile`,{
-        headers:{
-          "Authorization":`Bearer ${token}`
-        }
-      });
+      const response = await api.get(`/api/users/profile`);
       const user = response.data;
       dispatch({ type: GET_USER_SUCCESS, payload: user });
       console.log("req User ",user)
@@ -96,9 +87,9 @@ export const getUser = (token) => {
   };
 };
 
-export const logout = (token) => {
-    return async (dispatch) => {
-      dispatch({ type: LOGOUT });
-      localStorage.clear();
-    };
+export const logout = () => {
+  return async (dispatch) => {
+    dispatch({ type: LOGOUT });
+    localStorage.clear();
   };
+};
