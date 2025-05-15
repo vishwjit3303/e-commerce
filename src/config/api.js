@@ -4,10 +4,12 @@ export const API_BASE_URL = "https://ecommerce-server-production-f74b.up.railway
 
 const jwt = localStorage.getItem("jwt")
 
-export const api = axios.create({
+const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     "Authorization": `Bearer ${jwt}`,
     "Content-Type": "application/json"
   }
 })
+
+export default api
