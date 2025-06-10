@@ -90,3 +90,14 @@ This project is a full-stack e-commerce application with a React frontend and a 
 This project is licensed under the MIT License.
 
 # Screenshots
+
+- <img src = "output_screenshots/1.png" alt = "1 image"> 
+- <img src = "output_screenshots/2.png" alt = "2 image"> 
+- <img src = "output_screenshots/3.png" alt = "3 image"> 
+- <img src = "output_screenshots/4.png" alt = "4 image">
+- <img src = "output_screenshots/5.png" alt = "5 image">
+- <img src = "output_screenshots/6.png" alt = "6 image"> 
+- <img src = "output_screenshots/7.png" alt = "7 image"> 
+- <img src = "output_screenshots/8.png" alt = "8 image"> 
+- <img src = "output_screenshots/9.png" alt = "9 image">
+- <img src = "output_screenshots/10.png" alt = "10 image">
