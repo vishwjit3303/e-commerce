@@ -103,4 +103,10 @@ This project is licensed under the MIT License.
 - <img src = "output_screenshots/8.jpeg" alt = "8 image"> 
 - <img src = "output_screenshots/9.jpeg" alt = "9 image">
 - <img src = "output_screenshots/10.jpeg" alt = "10 image">
->>>>>>> 7a40bd23b94e951918bb75fd5229e8f571310833
+- <img src = "output_screenshots/11.jpeg" alt = "11 image">
+- <img src = "output_screenshots/12.jpeg" alt = "12 image">
+- <img src = "output_screenshots/13.jpeg" alt = "13 image">
+- <img src = "output_screenshots/14.jpeg" alt = "14 image">
+- <img src = "output_screenshots/15.jpeg" alt = "15 image">
+- <img src = "output_screenshots/16.jpeg" alt = "16 image">
+
