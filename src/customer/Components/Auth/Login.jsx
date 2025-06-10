@@ -40,7 +40,7 @@ export default function LoginUserForm({ handleNext }) {
   };
 
   return (
-    <React.Fragment className=" shadow-lg ">
+    <div className=" shadow-lg ">
      
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
@@ -116,6 +116,6 @@ export default function LoginUserForm({ handleNext }) {
           {auth.error?auth.error:auth.user?"Register Success":""}
         </Alert>
       </Snackbar>
-    </React.Fragment>
+    </div>
   );
 }

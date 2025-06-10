@@ -48,11 +48,21 @@ export const login = userData => async dispatch => {
     console.log("login ",user)
     dispatch(loginSuccess(user));
   } catch (error) {
-    dispatch(loginFailure(error.message));
+    // Enhanced error logging for debugging 500 error
+    if (error.response) {
+      console.error("Login error response data:", error.response.data);
+      console.error("Login error response status:", error.response.status);
+      console.error("Login error response headers:", error.response.headers);
+      dispatch(loginFailure(error.response.data.message || error.message));
+    } else if (error.request) {
+      console.error("Login error request:", error.request);
+      dispatch(loginFailure("No response received from server"));
+    } else {
+      console.error("Login error message:", error.message);
+      dispatch(loginFailure(error.message));
+    }
   }
 };
-
-
 
 //  get user from token
 export const getAllCustomers = (token) => {
