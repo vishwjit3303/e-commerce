@@ -16,18 +16,22 @@ const HomeCarousel = () => {
       alt=""
       onDragStart={handleDragStart}
       role="presentation"
+      style={{ width: "100%", height: "360px", objectFit: "cover", margin: "0 10px" }}
     />
   ));
   return (
-    <AliceCarousel
-      mouseTracking
-      items={item}
-      autoPlay
-      infinite
-      autoPlayInterval={2000}
-      disableButtonsControls
-    />
+    <div style={{ width: "100%", padding: "10px 0" }}>
+      <AliceCarousel
+        mouseTracking
+        items={item}
+        autoPlay
+        infinite
+        autoPlayInterval={2000}
+        disableButtonsControls
+      />
+    </div>
   );
 };
 
 export default HomeCarousel;
+
