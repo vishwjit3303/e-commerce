@@ -1,5 +1,5 @@
-import { Avatar, Box, Card, CardHeader, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, useTheme } from '@mui/material'
-import { useTheme as useMuiTheme } from '@mui/material/styles'
+import { Avatar, Box, Card, CardHeader, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 import React from 'react'
 
@@ -44,7 +44,7 @@ const dressPage1 = [
 ]
 
 const RecentlyAddeddProducts = () => {
-    const theme = useMuiTheme();
+    const theme = useTheme();
     const navigate=useNavigate();
   return (
     <Card>
