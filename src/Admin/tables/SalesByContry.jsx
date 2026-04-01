@@ -8,7 +8,7 @@ import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 
 // ** Icons Imports
-import ChevronUp from 'mdi-material-ui/ChevronUp'
+
 import ChevronDown from 'mdi-material-ui/ChevronDown'
 import DotsVertical from 'mdi-material-ui/DotsVertical'
 

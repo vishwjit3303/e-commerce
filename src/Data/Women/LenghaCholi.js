@@ -1,7 +1,7 @@
 export const lengha_page1 = [
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/u/g/a/free-half-sleeve-vbnd-fddj-astonblue-original-imagp286bmcaabbj.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/f/q/b/free-full-sleeve-lengha-18-pedr-trends-original-imahk77dxf3ufzyx.jpeg?q=70",
     "brand": "AstonBlue",
    "title": "Self Design Semi Stitched Lehenga Choli",
     "color": "Yellow",
@@ -30,7 +30,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/kmz7qfk0/lehenga-choli/m/0/t/s-sleeveless-l032-rayie-collection-original-imagfrbqhvddrnbd.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/1/u/9/free-sleeveless-wedding-lehenga-sfsf201382-gangotri-original-imahgy9hxcvywugt.jpeg?q=70",
     "brand": "rayie collection",
    "title": "Embroidered Stitched Lehenga & Crop Top",
     "color": "Black",
@@ -56,7 +56,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/5/n/h/l-3-4-sleeve-black-liva-original-imagmeyw2zzbch2g.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/x/e/y/free-sleeveless-big-bhavya-trivety-original-imahha93fhmmxtb6.jpeg?q=70",
     "brand": "Liva",
    "title": "Embroidered Stitched Lehenga & Crop Top",
     "color": "Black",
@@ -81,7 +81,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/b/h/z/xl-sleeveless-owa2cd2320a-soch-original-imagjvmyhy63ms7z.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/v/y/4/free-full-sleeve-renuka-kf-kedar-fab-original-imahf775szngrbqf.jpeg?q=70",
     "brand": "soch",
    "title": "Embellished Stitched Lehenga Choli",
     "color": "Yellow",
@@ -105,7 +105,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/y/d/8/l-3-4-sleeve-green-liva-original-imagmez3duzyzzxz.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/u/r/l/free-sleeveless-chaniyacholi-sf201383-hummertex-original-imahgy9hxqjqbyev.jpeg?q=70",
     "brand": "Liva",
    "title": "Embroidered Stitched Lehenga & Crop Top",
     "color": "Green",
@@ -130,7 +130,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/j/b/g/xl-sleeveless-owa2cd2319a-soch-original-imagjvmysh3z9egk.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/j/r/a/free-sleeveless-chaniyacholi-sf201337-hummertex-original-imahgy9hcpjmfx8q.jpeg?q=70",
     "brand": "soch",
    "title": "Solid Stitched Lehenga Choli",
     "color": "Dark Blue",
@@ -155,7 +155,7 @@ export const lengha_page1 = [
  
 {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/l16rde80/lehenga-choli/h/r/t/free-3-4-sleeve-r1-5-aminia-original-imagct7ghhpgrm48.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/c/v/5/free-full-sleeve-lehenga-lehenga-for-women-wedding-party-lehenga-original-imahehvdn5fjqnc6.jpeg?q=70",
     "brand": "AMINIA",
    "title": "Embroidered Semi Stitched Lehenga Choli",
     "color": "Maroon",
@@ -180,7 +180,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/r/8/u/free-half-sleeve-mjo4061-mjo-fashion-original-imagmyk9yxpykc7j.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/c/v/5/free-full-sleeve-lehenga-lehenga-for-women-wedding-party-lehenga-original-imahehvdn5fjqnc6.jpeg?q=70",
     "brand": "mjo fashion",
    "title": "Embroidered Semi Stitched Lehenga Choli",
     "color": "Maroon",
@@ -205,7 +205,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/3/d/1/l-half-sleeve-na-lh-mamta-fashion-hub-original-imagz6fhx79zcy7g.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/4/k/g/free-na-ariya-tr-r-k-infinitive-original-imah2qegbr9wnr2m.jpeg?q=70",
     "brand": "rashora",
    "title": "Self Design Semi Stitched Lehenga Choli",
     "color": "Gold, Orange",
@@ -230,7 +230,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/sari/j/f/n/free-verveecouture-vv-126-vervee-couture-unstitched-original-imagnhgjmgrth4xr.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/a/b/p/free-full-sleeve-lengha-21-folkshwear-21-original-imahjqnsedzxa8ut.jpeg?q=70",
     "brand": "Vervee Couture",
    "title": "Embroidered Semi Stitched Lehenga Choli",
     "color": "Blue",
@@ -255,7 +255,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/z/c/c/free-short-sleeve-sochncugc5604-soch-original-imaghy7nebe4jzhn.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/kids-lehenga-choli/y/v/j/14-15-years-k-lc70-009-women-wed-original-imahyr63zuzwfakc.jpeg?q=70",
     "brand": "soch",
    "title": "Embroidered Semi Stitched Lehenga Choli",
     "color": "Maroon",
@@ -280,7 +280,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/m/d/c/free-short-sleeve-women-satin-red-lehenga-choli-set-for-wedding-original-imagn8kzjrfakvsu.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/y/j/p/free-half-sleeve-esha1-shivalik-fashion-original-imahjbyct5w5xbmf.jpeg?q=70",
     "brand": "kajtosh",
    "title": "Embroidered Semi Stitched Lehenga Choli",
     "color": "Red",
@@ -305,7 +305,7 @@ export const lengha_page1 = [
   },
   {
     "imageUrl":
-      "https://rukminim1.flixcart.com/imageUrl/612/612/xif0q/lehenga-choli/3/c/l/m-sleeveless-owa2cd2127a-soch-original-imagg4543hg6dmjs.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/lehenga-choli/p/f/6/free-sleeveless-wedding-lehenga-sfsf201389-gangotri-original-imahgy9hcyc98gud.jpeg?q=70",
     "brand": "soch",
    "title": "Embroidered Stitched Lehenga Choli",
     "color": "Green",

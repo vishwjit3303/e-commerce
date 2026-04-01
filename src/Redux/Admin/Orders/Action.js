@@ -16,9 +16,7 @@ import {
   getOrdersFailure,
   getOrdersRequest,
   getOrdersSuccess,
-  placedOrderFailure,
-  placedOrderRequest,
-  placedOrderSuccess,
+
   shipOrderFailure,
   shipOrderRequest,
   shipOrderSuccess,

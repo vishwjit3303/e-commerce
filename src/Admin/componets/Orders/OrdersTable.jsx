@@ -6,11 +6,8 @@ import {
   Card,
   CardHeader,
   Chip,
-  FormControl,
-  InputLabel,
   Menu,
   MenuItem,
-  Pagination,
   Table,
   TableBody,
   TableCell,
@@ -23,8 +20,6 @@ import {
 import React, { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import { Grid, Select } from "@mui/material";
-import { dressPage1 } from "../../../Data/dress/page1";
 import { useDispatch, useSelector } from "react-redux";
 import {
   confirmOrder,
@@ -33,12 +28,12 @@ import {
   getOrders,
   shipOrder,
 } from "../../../Redux/Admin/Orders/Action";
-import { configure } from "@testing-library/react";
+
 
 const OrdersTable = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ status: "", sort: "" });
-  const [orderStatus, setOrderStatus] = useState("");
+
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
   const { adminsOrder } = useSelector((store) => store);
@@ -46,7 +41,7 @@ const OrdersTable = () => {
 
   useEffect(() => {
     dispatch(getOrders({ jwt }));
-  }, [jwt,adminsOrder.delivered, adminsOrder.shipped, adminsOrder.confirmed]);
+  }, [dispatch, jwt,adminsOrder.delivered, adminsOrder.shipped, adminsOrder.confirmed]);
 
   // useEffect(()=>{
   //   dispatch(getOrders({jwt}))
@@ -64,32 +59,21 @@ const OrdersTable = () => {
     setAnchorElArray(newAnchorElArray);
   };
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
 
-    setFormData({ ...formData, [name]: value });
-  };
-  function handlePaginationChange(event, value) {
-    console.log("Current page:", value);
-  }
 
   const handleConfirmedOrder = (orderId, index) => {
     handleUpdateStatusMenuClose(index);
     dispatch(confirmOrder(orderId));
-    setOrderStatus("CONFIRMED")
   };
 
   const handleShippedOrder = (orderId,index) => {
     handleUpdateStatusMenuClose(index);
-    dispatch(shipOrder(orderId))
-    setOrderStatus("ShIPPED")
+    dispatch(shipOrder(orderId));
   };
 
-  const handleDeliveredOrder = (orderId,index) => {
+  const handleDeliveredOrder = (orderId, index) => {
     handleUpdateStatusMenuClose(index);
-    dispatch(deliveredOrder(orderId))
-    setOrderStatus("DELIVERED")
+    dispatch(deliveredOrder(orderId));
   };
 
   const handleDeleteOrder = (orderId) => {
@@ -267,7 +251,7 @@ const OrdersTable = () => {
                         >
                           SHIPPED ORDER
                         </MenuItem>
-                        <MenuItem onClick={() => handleDeliveredOrder(item.id)}>
+                        <MenuItem onClick={() => handleDeliveredOrder(item.id, index)}>
                           DELIVERED ORDER
                         </MenuItem>
                       </Menu>

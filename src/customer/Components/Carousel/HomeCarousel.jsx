@@ -16,11 +16,11 @@ const HomeCarousel = () => {
       alt=""
       onDragStart={handleDragStart}
       role="presentation"
-      style={{ width: "100%", height: "360px", objectFit: "cover", margin: "0 10px" }}
+      style={{ width: "100%", height: "520px", objectFit: "cover", margin: "0 0px" }}
     />
   ));
   return (
-    <div style={{ width: "100%", padding: "10px 0" }}>
+    <div style={{ width: "100%", padding: "0px 0" }}>
       <AliceCarousel
         mouseTracking
         items={item}

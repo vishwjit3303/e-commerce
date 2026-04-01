@@ -4,12 +4,7 @@ import {
   Button,
   Card,
   CardHeader,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
   Pagination,
-  Select,
   Table,
   TableBody,
   TableCell,
@@ -20,7 +15,7 @@ import {
 } from "@mui/material";
 
 import React from "react";
-import { dressPage1 } from "../../../Data/dress/page1";
+
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -35,11 +30,7 @@ const ProductsTable = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { customersProduct } = useSelector((store) => store);
-  const [filterValue, setFilterValue] = useState({
-    availability: "",
-    category: "",
-    sort: "",
-  });
+
 
   // query
   const searchParams = new URLSearchParams(location.search);
@@ -55,7 +46,6 @@ const ProductsTable = () => {
   };
 
   useEffect(() => {
-    // setFilterValue({ availability, category, sort });
     const data = {
       category: category || "",
       colors: [],
@@ -69,15 +59,9 @@ const ProductsTable = () => {
       stock: availability,
     };
     dispatch(findProducts(data));
-  }, [availability, category, sort, page, customersProduct.deleteProduct]);
+  }, [dispatch, availability, category, sort, page, customersProduct.deleteProduct]);
 
-  const handleFilterChange = (e, sectionId) => {
-    console.log(e.target.value, sectionId);
-    setFilterValue((values) => ({ ...values, [sectionId]: e.target.value }));
-    searchParams.set(sectionId, e.target.value);
-    const query = searchParams.toString();
-    navigate({ search: `?${query}` });
-  };
+
 
   const handleDeleteProduct = (productId) => {
     console.log("delete product ", productId);

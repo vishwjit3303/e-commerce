@@ -1,18 +1,18 @@
 export const homeCarouselData = [
   {
-    image: "https://images.pexels.com/photos/3769747/pexels-photo-3769747.jpeg",
+    image: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/home-page_1.jpg?w=1500&dpr=2",
     path: "/women/clothing/lengha_choli"
   },
   {
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg",
+    image: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/men_shirts_-_homepage.jpg?w=1500&dpr=2",
     path: "/women/clothing/women_dress"
   },
   {
-    image: "https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg",
+    image: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/home-page_2.jpg?w=1500&dpr=2",
     path: "/women/clothing/women_dress"
   },
   {
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg",
+    image: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/Home-page_jj78C83.jpg?w=1500&dpr=2",
     path: "/women/clothing/women_saree"
   }
 ];

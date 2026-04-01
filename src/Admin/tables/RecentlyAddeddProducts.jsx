@@ -1,11 +1,50 @@
-import { Avatar, Box, Card, CardHeader, Chip, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
+import { Avatar, Box, Card, CardHeader, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, useTheme } from '@mui/material'
+import { useTheme as useMuiTheme } from '@mui/material/styles'
 
 import React from 'react'
-import { dressPage1 } from '../../Data/dress/page1'
+
 import { useNavigate } from 'react-router-dom'
 
+const dressPage1 = [
+  {
+    title: "Stylish Summer Dress",
+    imageUrl: "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/k/o/8/free-xl-kt-fab-mart-original-imagujp8gzfhhzjg.jpeg?q=70",
+    brand: "Zara",
+    discountedPrice: "$49.99",
+    quantity: 100
+  },
+  {
+    title: "Elegant Evening Gown",
+    imageUrl: "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/p/c/w/free-m-zestflavours-original-imagp3gfhzfmz8gz.jpeg?q=70", 
+    brand: "H&M",
+    discountedPrice: "$79.99",
+    quantity: 75
+  },
+  {
+    title: "Casual Cotton Dress",
+    imageUrl: "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/y/4/u/free-s-mesh-clothing-co-original-imagp3g5z5hgzhhg.jpeg?q=70",
+    brand: "Forever 21",
+    discountedPrice: "$29.99",
+    quantity: 150
+  },
+  {
+    title: "Floral Maxi Dress",
+    imageUrl: "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/n/u/5/free-l-shefos-original-imagqngj9hgzfzkt.jpeg?q=70",
+    brand: "ASOS",
+    discountedPrice: "$59.99",
+    quantity: 50
+  },
+  {
+    title: "Party Cocktail Dress", 
+    imageUrl: "https://rukminim1.flixcart.com/image/832/832/xif0q/dress/o/s/z/free-m-varni-by-lakshita-original-imagr2g7zpyjhwzx.jpeg?q=70",
+    brand: "Mango",
+    discountedPrice: "$89.99",
+    quantity: 30
+  }
+]
 
 const RecentlyAddeddProducts = () => {
+    const theme = useMuiTheme();
     const navigate=useNavigate();
   return (
     <Card>
@@ -31,7 +70,7 @@ const RecentlyAddeddProducts = () => {
         </TableHead>
         <TableBody>
           {dressPage1.slice(0,5).map(item => (
-            <TableRow hover key={item.name} sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
+            <TableRow hover key={item.title} sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
              <TableCell> <Avatar alt={item.title} src={item.imageUrl} /> </TableCell>
              
               <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
@@ -43,8 +82,6 @@ const RecentlyAddeddProducts = () => {
               <TableCell>{"dress"}</TableCell>
               <TableCell>{item.discountedPrice}</TableCell>
               <TableCell>{item.quantity}</TableCell>
-              
-             
             </TableRow>
           ))}
         </TableBody>

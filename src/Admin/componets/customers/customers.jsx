@@ -1,7 +1,7 @@
 // ** MUI Imports
-import Box from '@mui/material/Box'
+
 import Card from '@mui/material/Card'
-import Chip from '@mui/material/Chip'
+
 import Table from '@mui/material/Table'
 import TableRow from '@mui/material/TableRow'
 import TableHead from '@mui/material/TableHead'
@@ -25,8 +25,8 @@ const Customers = () => {
   useEffect(()=>{
     console.log("customer table use effect")
     dispatch(getAllCustomers(localStorage.getItem("jwt")))
-  },[])
-  console.log("customer table ")
+  }, [dispatch])
+
   return (
     <Card>
       <CardHeader

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { findProductById } from "../../../../Redux/Customers/Product/Action";
 import { addItemToCart } from "../../../../Redux/Customers/Cart/Action";
 import { getAllReviews } from "../../../../Redux/Customers/Review/Action";
-import { lengha_page1 } from "../../../../Data/Women/LenghaCholi";
+
 import { gounsPage1 } from "../../../../Data/Gouns/gouns";
 
 const product = {
@@ -89,14 +89,13 @@ export default function ProductDetails() {
     const data = { productId: Number(productId), jwt };
     dispatch(findProductById(data));
     dispatch(getAllReviews(productId));
-  }, [productId]);
+  }, [dispatch, jwt, productId]);
 
   return (
     <div className="bg-white lg:px-20">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
-          <ol
-            role="list"
+            <ol
             className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
           >
             {product.breadcrumbs.map((breadcrumb) => (
@@ -141,7 +140,7 @@ export default function ProductDetails() {
             <div className=" overflow-hidden rounded-lg max-w-[30rem] max-h-[35rem]">
               <img
                 src={activeImage?.src || customersProduct.product?.imageUrl}
-                // alt={product.images[0].alt}
+                alt=""
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -310,7 +309,7 @@ export default function ProductDetails() {
                 </h3>
 
                 <div className="mt-4">
-                  <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                  <ul className="list-disc space-y-2 pl-4 text-sm">
                     {product.highlights.map((highlight) => (
                       <li key={highlight} className="text-gray-400">
                         <span className="text-gray-600">{highlight}</span>
