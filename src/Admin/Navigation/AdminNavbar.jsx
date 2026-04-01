@@ -61,8 +61,6 @@ export default function AdminNavbar({handleSideBarViewInMobile}) {
   const menuId = 'primary-search-account-menu';
   const mobileMenuId = 'mobile-menu';
   
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
@@ -70,9 +68,7 @@ export default function AdminNavbar({handleSideBarViewInMobile}) {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
+
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);

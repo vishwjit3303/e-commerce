@@ -9,7 +9,7 @@ import CardStatsVertical from "../../Styles/CardStatsVertical";
 
 
 import CustomersTable from "../tables/CustomersTable";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import { customTheme } from "../them/customeThem";
 import "./Admin.css";
 import RecentlyAddeddProducts from "../tables/RecentlyAddeddProducts";
@@ -18,7 +18,7 @@ import RecentOrders from "../tables/RecentOrders";
 
 import { BriefcaseVariantOutline, CurrencyUsd, HelpCircleOutline, Poll } from "mdi-material-ui";
 
-import { useSelector } from "react-redux";
+
 
 
 

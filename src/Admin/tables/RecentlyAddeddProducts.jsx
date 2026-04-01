@@ -1,9 +1,9 @@
 import { Avatar, Box, Card, CardHeader, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
-import { useTheme } from '@mui/material/styles'
+
 
 import React from 'react'
 
-import { useNavigate } from 'react-router-dom'
+
 
 const dressPage1 = [
   {

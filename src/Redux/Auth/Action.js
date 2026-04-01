@@ -13,7 +13,7 @@ import {
   GET_ALL_CUSTOMERS_SUCCESS,
   GET_ALL_CUSTOMERS_FAILURE
 } from './ActionTypes';
-import api, { API_BASE_URL } from '../../config/api';
+import api from '../../config/api';
 
 // Register action creators
 const registerRequest = () => ({ type: REGISTER_REQUEST });

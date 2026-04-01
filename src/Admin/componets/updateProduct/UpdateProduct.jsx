@@ -55,17 +55,7 @@ const UpdateProductForm = () => {
     }));
   };
 
-  const handleSizeChange = (e, index) => {
-    let { name, value } = e.target;
-    name === "size_quantity" ? (name = "quantity") : (name = e.target.name);
 
-    const sizes = [...productData.size];
-    sizes[index][name] = value;
-    setProductData((prevState) => ({
-      ...prevState,
-      size: sizes,
-    }));
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,7 +67,7 @@ const UpdateProductForm = () => {
     dispatch(findProductById({productId}));
   }, [dispatch, productId]);
 
-  useEffect(()=>{
+  useEffect(()=> {
     if(customersProduct.product){
         for(let key in productData){
     setProductData((prev)=>({...prev,[key]:customersProduct.product[key]}))
@@ -85,7 +75,7 @@ const UpdateProductForm = () => {
 }
     }
 
-  },[dispatch, customersProduct.product])
+  },[dispatch, customersProduct.product, productData])
 
   return (
     <Fragment className="createProductContainer ">
