@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,6 +8,8 @@ import IconButton from '@mui/material/IconButton';
 
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -47,7 +50,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
+    // verify below with original
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -58,21 +61,70 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function AdminNavbar({handleSideBarViewInMobile}) {
-  const menuId = 'primary-search-account-menu';
-  const mobileMenuId = 'mobile-menu';
-  
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-
+  
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
+  };
+
+  const mobileMenuId = 'primary-search-account-menu-mobile';
+
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      open={Boolean(mobileMoreAnchorEl)}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem onClick={handleMobileMenuClose}>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+        Messages
+      </MenuItem>
+      <MenuItem onClick={handleMobileMenuClose}>
+        <IconButton
+          size="large" 
+          aria-label="show 17 new notifications" 
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton>
+        Notifications
+      </MenuItem>
+      <MenuItem onClick={handleMobileMenuClose}>
+        <IconButton
+          size="large"
+          edge="end"
+          aria-label="account of current user"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        Profile
+      </MenuItem>
+    </Menu>
+  );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -118,9 +170,6 @@ export default function AdminNavbar({handleSideBarViewInMobile}) {
               size="large"
               edge="end"
               aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
               color="inherit"
             >
               <AccountCircle />
@@ -130,17 +179,15 @@ export default function AdminNavbar({handleSideBarViewInMobile}) {
             <IconButton
               size="large"
               aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
               color="inherit"
+              onClick={handleMobileMenuOpen}
             >
               <MoreIcon />
             </IconButton>
           </Box>
         </Toolbar>
+        {renderMobileMenu}
       </AppBar>
-      
     </Box>
   );
 }

@@ -1,35 +1,10 @@
-# ESLint Fixes for Vercel Build
-## Plan Status: Approved
+# TODO: Fix Vercel Deployment (ESLint no-undef Errors)
 
-**Completed:**
-- [x] 1. Create TODO.md
+## Steps:
+- [x] Step 1: Edit src/Admin/Navigation/AdminNavbar.jsx (add useState, menu logic)
+- [x] Step 2: Edit src/Admin/tables/RecentlyAddeddProducts.jsx (add imports, theme/navigate)
+- [ ] Step 3: Test locally - Run `npm run build` (should succeed, no ESLint errors)
+- [ ] Step 4: Commit changes and push to GitHub main (triggers Vercel redeploy)
+- [ ] Step 5: Verify Vercel deployment success
 
-**Completed Edits (18/22 files):**
-- [x] src/Admin/Navigation/AdminNavbar.jsx
-- [x] src/Admin/Views/Admin.jsx
-- [x] src/Admin/Views/DemoAdmin.jsx
-- [x] src/Admin/componets/Orders/OrdersTable.jsx
-- [x] src/Admin/componets/Products/ProductsTable.jsx
-- [x] src/Admin/componets/customers/customers.jsx
-- [x] src/Admin/componets/updateProduct/UpdateProduct.jsx
-- [x] src/Admin/tables/RecentlyAddeddProducts.jsx
-- [x] src/Redux/Auth/Action.js
-- [x] src/Redux/Customers/Cart/Action.js
-- [x] src/Redux/Customers/Order/Action.jsx
-- [x] src/Redux/Customers/Payment/Action.js
-- [x] src/Redux/Customers/Product/Action.js
-- [x] src/Redux/Customers/Product/Reducer.js
-- [x] src/Routers/CustomerRoutes.jsx
-- [x] src/config/api.js
-- [x] src/customer/Components/Auth/AuthModal.jsx
-**Pending:** Customer useEffect deps (Login/Register/Cart/Navigation/etc.)
-
-**Testing:**
-- [ ] npm run build
-- [ ] src/Admin/Views/Admin.jsx (remove createTheme, useSelector)
-- [ ] src/Admin/Views/DemoAdmin.jsx (remove AppBar)
-- [ ] ... (full list as planned)
-
-**Testing:**
-- [ ] npm run build
-
+**Next**: Run Step 3 - `npm run build`?

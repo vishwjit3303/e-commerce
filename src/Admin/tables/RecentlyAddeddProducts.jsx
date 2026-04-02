@@ -1,3 +1,5 @@
+import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 import { Avatar, Box, Card, CardHeader, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 
 
@@ -44,14 +46,15 @@ const dressPage1 = [
 ]
 
 const RecentlyAddeddProducts = () => {
-    const theme = useTheme();
-    const navigate=useNavigate();
+  const theme = useTheme();
+  const navigate = useNavigate();
+
   return (
     <Card>
        <CardHeader
           title='Recently Added Products'
           sx={{ pt: 2, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
-          action={<Typography onClick={()=>navigate("/admin/products")} variant='caption' sx={{color:"blue",cursor:"pointer",paddingRight:".8rem"}}>View All</Typography>}
+          action={<Typography variant='caption' sx={{color:"blue",cursor:"pointer",paddingRight:".8rem"}} onClick={() => navigate('/admin/products')}>View All</Typography>}
           titleTypographyProps={{
             variant: 'h5',
             sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
@@ -73,7 +76,7 @@ const RecentlyAddeddProducts = () => {
             <TableRow hover key={item.title} sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
              <TableCell> <Avatar alt={item.title} src={item.imageUrl} /> </TableCell>
              
-              <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
+              <TableCell sx={{ py: `${theme.spacing(0.5)} !important` }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}>{item.title}</Typography>
                   <Typography variant='caption'>{item.brand}</Typography>
